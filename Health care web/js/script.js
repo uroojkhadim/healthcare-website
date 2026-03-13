@@ -69,7 +69,7 @@ document.addEventListener('DOMContentLoaded', () => {
             <h2 class="section-title">Our Specialist Doctors</h2>
             <div class="grid-3">
                 <div class="card doctor-card text-center">
-                    <img src="https://via.placeholder.com/150" alt="Dr. Sarah Khan" class="doctor-img">
+                    <img src="img/dr_sarah_khan.png" alt="Dr. Sarah Khan" class="doctor-img">
                     <h3>Dr. Sarah Khan</h3>
                     <p class="specialty">Cardiologist</p>
                     <p>12 Years Experience</p>
@@ -77,7 +77,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     <button class="btn btn-primary mt-1">Book Now</button>
                 </div>
                 <div class="card doctor-card text-center">
-                    <img src="https://via.placeholder.com/150" alt="Dr. Ahmed Ali" class="doctor-img">
+                    <img src="img/dr_ahmed_ali.png" alt="Dr. Ahmed Ali" class="doctor-img">
                     <h3>Dr. Ahmed Ali</h3>
                     <p class="specialty">Neurologist</p>
                     <p>10 Years Experience</p>
@@ -85,7 +85,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     <button class="btn btn-primary mt-1">Book Now</button>
                 </div>
                 <div class="card doctor-card text-center">
-                    <img src="https://via.placeholder.com/150" alt="Dr. Fatima Hassan" class="doctor-img">
+                    <img src="img/dr_fatima_hassan.png" alt="Dr. Fatima Hassan" class="doctor-img">
                     <h3>Dr. Fatima Hassan</h3>
                     <p class="specialty">Pediatrician</p>
                     <p>8 Years Experience</p>
