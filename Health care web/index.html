@@ -13,34 +13,54 @@
 </head>
 <body>
 
+    <!-- Mobile Header (Visible < 768px) -->
+    <header class="mobile-header">
+        <button class="menu-toggle" id="menu-toggle">
+            <i class="fas fa-bars"></i>
+        </button>
+        <div class="logo">
+            <i class="fas fa-heart-pulse"></i>
+            <span>CarePlus</span>
+        </div>
+        <div class="user-action">
+            <i class="fas fa-user-circle"></i>
+        </div>
+    </header>
+
+    <!-- Sidebar Overlay (Mobile backdrop) -->
+    <div class="overlay" id="sidebar-overlay"></div>
+
     <!-- Sidebar Container -->
-    <aside class="sidebar">
+    <aside class="sidebar" id="sidebar">
         <div class="sidebar-header">
+            <button class="close-sidebar" id="close-sidebar">
+                <i class="fas fa-times"></i>
+            </button>
             <div class="logo">
                 <i class="fas fa-heart-pulse"></i>
-                <span>CarePlus</span>
+                <span class="logo-text">CarePlus</span>
             </div>
         </div>
 
         <nav class="nav-menu">
             <ul>
                 <li class="nav-item active" data-page="home">
-                    <a href="#"><i class="fas fa-home"></i> <span>Home</span></a>
+                    <a href="#"><i class="fas fa-home"></i> <span class="menu-text">Home</span></a>
                 </li>
                 <li class="nav-item" data-page="about">
-                    <a href="#"><i class="fas fa-info-circle"></i> <span>About</span></a>
+                    <a href="#"><i class="fas fa-info-circle"></i> <span class="menu-text">About</span></a>
                 </li>
                 <li class="nav-item" data-page="doctors">
-                    <a href="#"><i class="fas fa-user-md"></i> <span>Doctors</span></a>
+                    <a href="#"><i class="fas fa-user-md"></i> <span class="menu-text">Doctors</span></a>
                 </li>
                 <li class="nav-item" data-page="services">
-                    <a href="#"><i class="fas fa-stethoscope"></i> <span>Services</span></a>
+                    <a href="#"><i class="fas fa-stethoscope"></i> <span class="menu-text">Services</span></a>
                 </li>
                 <li class="nav-item" data-page="appointment">
-                    <a href="#"><i class="fas fa-calendar-check"></i> <span>Appointment</span></a>
+                    <a href="#"><i class="fas fa-calendar-check"></i> <span class="menu-text">Appointment</span></a>
                 </li>
                 <li class="nav-item" data-page="contact">
-                    <a href="#"><i class="fas fa-phone-alt"></i> <span>Contact</span></a>
+                    <a href="#"><i class="fas fa-phone-alt"></i> <span class="menu-text">Contact</span></a>
                 </li>
             </ul>
         </nav>
@@ -48,7 +68,7 @@
         <div class="sidebar-footer">
             <div class="emergency-badge">
                 <i class="fas fa-ambulance"></i>
-                <span>Emergency: 911</span>
+                <span class="emergency-text">Emergency: 911</span>
             </div>
         </div>
     </aside>
@@ -58,6 +78,16 @@
         <div id="content-container" class="content-wrapper">
             <!-- Dynamic content will be injected here -->
         </div>
+
+        <!-- Developer Credit Footer -->
+        <footer class="main-footer">
+            <div class="footer-content">
+                <p><i class="fas fa-code"></i> Developed by Urooj Khadim</p>
+                <a href="mailto:uroojkhadim505@gmail.com" class="footer-email">
+                    <i class="fas fa-envelope"></i> uroojkhadim505@gmail.com
+                </a>
+            </div>
+        </footer>
     </main>
 
     <!-- JavaScript Injection -->

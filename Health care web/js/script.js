@@ -192,6 +192,36 @@ document.addEventListener('DOMContentLoaded', () => {
         return icons[service] || 'stethoscope';
     }
 
+    // Mobile Navigation Logic
+    const sidebar = document.getElementById('sidebar');
+    const menuToggle = document.getElementById('menu-toggle');
+    const closeSidebar = document.getElementById('close-sidebar');
+    const overlay = document.getElementById('sidebar-overlay');
+
+    function toggleSidebar(isOpen) {
+        if (isOpen) {
+            sidebar.classList.add('open');
+            overlay.classList.add('active');
+            document.body.style.overflow = 'hidden';
+        } else {
+            sidebar.classList.remove('open');
+            overlay.classList.remove('active');
+            document.body.style.overflow = 'auto';
+        }
+    }
+
+    if (menuToggle) menuToggle.addEventListener('click', () => toggleSidebar(true));
+    if (closeSidebar) closeSidebar.addEventListener('click', () => toggleSidebar(false));
+    if (overlay) overlay.addEventListener('click', () => toggleSidebar(false));
+
+    // Swipe to close functionality
+    let touchStartX = 0;
+    sidebar.addEventListener('touchstart', e => touchStartX = e.touches[0].clientX);
+    sidebar.addEventListener('touchend', e => {
+        const touchEndX = e.changedTouches[0].clientX;
+        if (touchStartX - touchEndX > 50) toggleSidebar(false); // Swipe left
+    });
+
     // Navigation Logic
     function loadPage(pageKey) {
         // Update content with fade effect
@@ -203,6 +233,9 @@ document.addEventListener('DOMContentLoaded', () => {
             // Re-run specific initializations
             if (pageKey === 'home') startCountUp();
             if (pageKey === 'appointment') setupFormHandler();
+            
+            // Auto-scroll to top when page changes
+            document.querySelector('.main-content').scrollTop = 0;
         }, 300);
 
         // Update active menu
@@ -213,6 +246,11 @@ document.addEventListener('DOMContentLoaded', () => {
                 item.classList.remove('active');
             }
         });
+
+        // Close sidebar on mobile after selection
+        if (window.innerWidth < 768) {
+            toggleSidebar(false);
+        }
     }
 
     // Count Up Animation
