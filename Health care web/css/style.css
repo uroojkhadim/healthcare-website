@@ -315,7 +315,8 @@ body {
 
     .sidebar .menu-text,
     .sidebar .logo-text,
-    .sidebar .emergency-text {
+    .sidebar .emergency-text,
+    .sidebar .credit-text {
         display: none;
     }
     
@@ -400,38 +401,28 @@ body {
     border-radius: 12px;
 }
 
-/* Footer Credits */
-.main-footer {
-    background-color: var(--dark-blue);
-    color: var(--white);
-    padding: 2rem 1.5rem;
-    margin-top: 3rem;
-    border-radius: 12px 12px 0 0;
+/* Developer Credits in Sidebar */
+.developer-credits {
+    margin-top: 1.5rem;
     text-align: center;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    padding-top: 1.5rem;
 }
 
-.footer-content {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-}
-
-.footer-content p {
-    font-weight: 500;
+.developer-credits p {
+    font-size: 0.85rem;
+    color: rgba(255, 255, 255, 0.7);
+    margin-bottom: 8px;
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 8px;
 }
 
-.footer-content i {
-    font-size: 0.9rem;
-}
-
 .footer-email {
-    color: rgba(255, 255, 255, 0.8);
+    color: rgba(255, 255, 255, 0.5);
     text-decoration: none;
-    font-size: 0.95rem;
+    font-size: 0.8rem;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -441,7 +432,6 @@ body {
 
 .footer-email:hover {
     color: var(--primary-green);
-    transform: translateY(-2px);
 }
 
 .contact-info p {
